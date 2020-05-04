@@ -39,7 +39,7 @@ function onUserSaveComplete(response, status) {
 		if (resultSet.status.trim() == "success") {
 			$("#alertSuccess").text("Successfully saved.");
 			$("#alertSuccess").show();
-			$("#divItemsGrid").html(resultSet.data);
+			$("#divUsersGrid").html(resultSet.data);
 		} else if (resultSet.status.trim() == "error") {
 			$("#alertError").text(resultSet.data);
 			$("#alertError").show();
