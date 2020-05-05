@@ -88,7 +88,6 @@ public class Doctor extends HttpServlet {
 				output += "<tr><td><input id='hidDoctorIDUpdate' name ='hidDoctorIDUpdate' type='hidden' value='"
 						+ doctorID + "'>" + doctorName + "</td>";
 
-				output += "<tr><td>" + doctorName + "</td>";
 				output += "<td>" + NIC + "</td>";
 				output += "<td>" + specialization + "</td>";
 				output += "<td>" + hospital + "</td>";

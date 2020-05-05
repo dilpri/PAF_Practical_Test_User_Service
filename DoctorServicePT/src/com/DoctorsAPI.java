@@ -32,7 +32,7 @@ public class DoctorsAPI extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -57,7 +57,7 @@ public class DoctorsAPI extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		Map paras = getParasMap(request);
-		String output = doctorObj.updateDoctor(paras.get("hidUserIDSave").toString(),
+		String output = doctorObj.updateDoctor(paras.get("hidDoctorIDSave").toString(),
 				paras.get("doctorName").toString(), paras.get("NIC").toString(), paras.get("specialization").toString(),
 				paras.get("hospital").toString(), paras.get("email").toString(), paras.get("mobileNo").toString());
 		response.getWriter().write(output);
