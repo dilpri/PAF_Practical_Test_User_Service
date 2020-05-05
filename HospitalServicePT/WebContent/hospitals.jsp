@@ -14,7 +14,7 @@
 <div class="container">
 		<div class="row">
 			<div class="col-8">
-				<h1>Users Management</h1>
+				<h1>Hospitals Management</h1>
 				<form id="formHospital" name="formHospital" method="post" action="hospitals.jsp">
 					Hospital Name : <input id="hosName" name="hosName" type="text"
 						class="form-control form-control-sm"><br> Location :

@@ -66,7 +66,7 @@ public class Hospital extends HttpServlet {
 				return "Error while connecting the database for reading";
 			}
 
-			output = "<table border='1'><tr><th>Hospital name</th><th>Location</th><th>Email</th></tr>";
+			output = "<table border='1'><tr><th>Hospital Name</th><th>Location</th><th>Email</th></tr>";
 
 			String query = "select * from hospitals";
 			Statement stmt = con.createStatement();
@@ -139,7 +139,7 @@ public class Hospital extends HttpServlet {
 				return "Error while connecting to the database for deleting.";
 			}
 			// create a prepared statement
-			String query = "delete from hospital where hospitalID=?";
+			String query = "delete from hospitals where hospitalID=?";
 			PreparedStatement preparedStmt = con.prepareStatement(query);
 			// binding values
 			preparedStmt.setInt(1, Integer.parseInt(hospitalID));
