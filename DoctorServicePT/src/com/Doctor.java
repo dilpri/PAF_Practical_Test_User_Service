@@ -84,8 +84,8 @@ public class Doctor extends HttpServlet {
 				String mobileNo = rs.getString("mobileNo");
 
 				// Add into the html table
-				output += "<tr><td><input id='hidUserIDUpdate' name ='hidUserIDUpdate' type='hidden' value='" + doctorID
-						+ "'>" + doctorName + "</td>";
+				output += "<tr><td><input id='hidDoctorIDUpdate' name ='hidDoctorIDUpdate' type='hidden' value='"
+						+ doctorID + "'>" + doctorName + "</td>";
 
 				output += "<tr><td>" + doctorName + "</td>";
 				output += "<td>" + NIC + "</td>";
