@@ -59,7 +59,7 @@ public class UsersAPI extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		Map paras = getParasMap(request);
-		String output = userObj.updateUser(paras.get("hidItemIDSave").toString(), paras.get("username").toString(),
+		String output = userObj.updateUser(paras.get("hidUserIDSave").toString(), paras.get("username").toString(),
 				paras.get("password").toString(), paras.get("email").toString(), paras.get("address").toString(),
 				paras.get("phoneNo").toString(), paras.get("age").toString(), paras.get("sex").toString(),
 				paras.get("userType").toString());
