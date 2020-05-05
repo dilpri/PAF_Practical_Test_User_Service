@@ -64,8 +64,8 @@ public class UsersAPI extends HttpServlet {
 				paras.get("email").toString().replace("+", " ").replace("%2C", ",").replace("%3A", ":")
 						.replace("%40", "@").replace("%2F", "/"),
 				paras.get("address").toString().replace("+", " ").replace("%2C", ",").replace("%3A", ":"),
-				paras.get("phoneNo").toString(), paras.get("age").toString(), paras.get("sex").toString(),
-				paras.get("userType").toString());
+				paras.get("phoneNo").toString().replace("+", " "), paras.get("age").toString().replace("+", " "),
+				paras.get("sex").toString().replace("+", " "), paras.get("userType").toString().replace("+", " "));
 		response.getWriter().write(output);
 	}
 

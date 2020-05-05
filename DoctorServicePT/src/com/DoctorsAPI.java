@@ -58,8 +58,11 @@ public class DoctorsAPI extends HttpServlet {
 
 		Map paras = getParasMap(request);
 		String output = doctorObj.updateDoctor(paras.get("hidDoctorIDSave").toString(),
-				paras.get("doctorName").toString(), paras.get("NIC").toString(), paras.get("specialization").toString(),
-				paras.get("hospital").toString(), paras.get("email").toString(), paras.get("mobileNo").toString());
+				paras.get("doctorName").toString().replace("+", " "), paras.get("NIC").toString().replace("+", " "),
+				paras.get("specialization").toString().replace("+", " "),
+				paras.get("hospital").toString().replace("+", " "), paras.get("email").toString().replace("+", " ")
+						.replace("%2C", ",").replace("%3A", ":").replace("%40", "@").replace("%2F", "/"),
+				paras.get("mobileNo").toString().replace("+", " "));
 		response.getWriter().write(output);
 	}
 
