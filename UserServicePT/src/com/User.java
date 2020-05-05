@@ -68,7 +68,7 @@ public class User extends HttpServlet {
 				return "Error while connecting to the database for reading.";
 			}
 			// Prepare the html table to be displayed
-			output = "<table border=\"1\"><tr><th>User name</th><th>Password</th><th>Email</th><th>Address</th><th>Phone No</th><th>Age</th><th>Sex</th><th>User Type</th><th>Update</th><th>Remove</th></tr>";
+			output = "<table border='1'><tr><th>User name</th><th>Password</th><th>Email</th><th>Address</th><th>Phone No</th><th>Age</th><th>Sex</th><th>User Type</th><th>Update</th><th>Remove</th></tr>";
 			String query = "select * from users";
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery(query);
@@ -84,8 +84,8 @@ public class User extends HttpServlet {
 				String sex = rs.getString("sex");
 				String userType = rs.getString("userType");
 				// Add into the html table
-				output += "<tr><td><input id=\"hidUserIDUpdate\" name =\"hidUserIDUpdate\" type=\"hidden\" value=\""
-						+ userID + "\">" + username + "</td>";
+				output += "<tr><td><input id='hidUserIDUpdate' name ='hidUserIDUpdate' type='hidden' value='" + userID
+						+ "'>" + username + "</td>";
 
 				output += "<td>" + password + "</td>";
 				output += "<td>" + email + "</td>";
@@ -146,7 +146,7 @@ public class User extends HttpServlet {
 		return output;
 	}
 
-	public String deleteItem(String userID) {
+	public String deleteUser(String userID) {
 		String output = "";
 		try {
 			Connection con = connect();

@@ -1,8 +1,7 @@
 $(document).ready(function () {
-	if ($("#alertSuccess").text().trim() == "") {
-		$("#alertSuccess").hide();
-	}
+	$("#alertSuccess").hide(); 
 	$("#alertError").hide();
+	
 });
 // SAVE ============================================
 $(document).on("click", "#btnSave", function (event) {
@@ -28,11 +27,11 @@ $(document).on("click", "#btnSave", function (event) {
 		data : $("#formUser").serialize(),
 		dataType : "text",
 		complete : function(response, status) {
-			onItemSaveComplete(response.responseText, status);
+			onUserSaveComplete(response.responseText, status);
 		}
 	});
 });
-// UPDATE==========================================
+
 function onUserSaveComplete(response, status) {
 	if (status == "success") {
 		var resultSet = JSON.parse(response);
@@ -54,7 +53,7 @@ function onUserSaveComplete(response, status) {
 	$("#hidUserIDSave").val("");
 	$("#formUser")[0].reset();
 }
-
+//DELETE
 $(document).on("click", ".btnRemove", function(event) {
 	$.ajax({
 		url : "UsersAPI",
@@ -62,7 +61,7 @@ $(document).on("click", ".btnRemove", function(event) {
 		data : "userID=" + $(this).data("userid"),
 		dataType : "text",
 		complete : function(response, status) {
-			onItemDeleteComplete(response.responseText, status);
+			onUserDeleteComplete(response.responseText, status);
 		}
 	});
 });

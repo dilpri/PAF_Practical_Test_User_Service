@@ -73,7 +73,7 @@ public class UsersAPI extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Map paras = getParasMap(request);
-		String output = userObj.deleteItem(paras.get("userID").toString());
+		String output = userObj.deleteUser(paras.get("userID").toString());
 		response.getWriter().write(output);
 
 	}
