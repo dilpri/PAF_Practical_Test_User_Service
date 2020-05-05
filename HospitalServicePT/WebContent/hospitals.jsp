@@ -21,7 +21,7 @@
 					<input id="location" name="location" type="text"
 						class="form-control form-control-sm"><br> Email : <input
 						id="email" name="email" type="text"
-						class="form-control form-control-sm"><br><input
+						class="form-control form-control-sm"><br> <input
 						id="btnSave" name="btnSave" type="button" value="Save"
 						class="btn btn-primary"> <input type="hidden"
 						id="hidHospitalIDSave" name="hidHospitalIDSave" value="">

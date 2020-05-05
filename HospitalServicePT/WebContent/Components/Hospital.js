@@ -98,7 +98,6 @@ $(document).on(
 			$("#hosName").val($(this).closest("tr").find('td:eq(0)').text());
 			$("#location").val($(this).closest("tr").find('td:eq(1)').text());
 			$("#email").val($(this).closest("tr").find('td:eq(2)').text());
-			
 		});
 
 
@@ -118,5 +117,6 @@ function validateUserForm() {
 		return "Insert Email.";
 	}
 	
+
 	return true;
 }
