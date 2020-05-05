@@ -38,7 +38,7 @@ function onDoctorSaveComplete(response, status) {
 		if (resultSet.status.trim() == "success") {
 			$("#alertSuccess").text("Successfully saved.");
 			$("#alertSuccess").show();
-			$("#divUsersGrid").html(resultSet.data);
+			$("#divDoctorsGrid").html(resultSet.data);
 		} else if (resultSet.status.trim() == "error") {
 			$("#alertError").text(resultSet.data);
 			$("#alertError").show();
@@ -56,7 +56,7 @@ function onDoctorSaveComplete(response, status) {
 //DELETE
 $(document).on("click", ".btnRemove", function(event) {
 	$.ajax({
-		url : "DoctorssAPI",
+		url : "DoctorsAPI",
 		type : "DELETE",
 		data : "doctorID=" + $(this).data("doctorid"),
 		dataType : "text",

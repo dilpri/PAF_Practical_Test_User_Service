@@ -52,7 +52,8 @@ public class Doctor extends HttpServlet {
 
 			// output = "Inserted successfully";
 		} catch (Exception e) {
-			output = "Error while inserting the doctor.";
+			output = "{\"status\":\"error\", \"data\":\"Error while inserting the doctor.\"}";
+			// output = "Error while inserting the doctor.";
 			System.err.println(e.getMessage());
 		}
 		return output;
@@ -139,7 +140,8 @@ public class Doctor extends HttpServlet {
 
 			// output = "Updated successfully";
 		} catch (Exception e) {
-			output = "Error while updating the doctor.";
+			output = "{\"status\":\"error\", \"data\":\"Error while updating the doctor.\"}";
+			// output = "Error while updating the doctor.";
 			System.err.println(e.getMessage());
 		}
 		return output;
@@ -167,7 +169,8 @@ public class Doctor extends HttpServlet {
 
 			// output = "Deleted successfully";
 		} catch (Exception e) {
-			output = "Error while deleting the doctor.";
+			output = "{\"status\":\"error\", \"data\":\"Error while deleting the doctor.\"}";
+			// output = "Error while deleting the doctor.";
 			System.err.println(e.getMessage());
 		}
 		return output;
