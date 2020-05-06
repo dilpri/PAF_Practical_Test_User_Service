@@ -102,7 +102,7 @@ $(document).on(
 
 
 // CLIENTMODEL=========================================================================
-function validateUserForm() {
+function validateHospitalForm() {
 	// name
 	if ($("#hosName").val().trim() == "") {
 		return "Insert Hospital Name.";
